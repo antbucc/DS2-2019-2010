@@ -1,0 +1,16 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>TickFile</name>
+  <dataSet>TickStats</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>avgInDegree</string>
+    <string>avgPathLength</string>
+    <string>clusteringCoefficient</string>
+    <string>tick</string>
+    <string>CurrentProcessCount</string>
+    <string>Clusters</string>
+  </sourceIds>
+  <fileName>RoundStats.txt</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>

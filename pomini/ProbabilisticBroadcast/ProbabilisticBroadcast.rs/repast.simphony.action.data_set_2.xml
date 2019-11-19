@@ -1,0 +1,63 @@
+<repast.simphony.data2.engine.DataSetDescriptor simphonyVersion="2.7.0">
+  <name>TickStats</name>
+  <type>NON_AGGREGATE</type>
+  <sourceType>probabilisticBroadcast.ActionManager</sourceType>
+  <inclTick>true</inclTick>
+  <inclBatchRun>false</inclBatchRun>
+  <inclRandomSeed>false</inclRandomSeed>
+  <scheduleParams>
+    <start>1.0</start>
+    <interval>1.0</interval>
+    <priority>-Infinity</priority>
+    <pType>LAST</pType>
+    <duration>-1.0</duration>
+    <frequency>REPEAT</frequency>
+    <hashCode>1690390881</hashCode>
+  </scheduleParams>
+  <atEnd>false</atEnd>
+  <methodDataSources class="linked-hash-map">
+    <entry>
+      <string>avgInDegree</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>avgInDegree</id>
+        <className>probabilisticBroadcast.ActionManager</className>
+        <methodName>avgInDegree</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>avgPathLength</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>avgPathLength</id>
+        <className>probabilisticBroadcast.ActionManager</className>
+        <methodName>avgPathLength</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>clusteringCoefficient</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>clusteringCoefficient</id>
+        <className>probabilisticBroadcast.ActionManager</className>
+        <methodName>clusteringCoefficient</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>CurrentProcessCount</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>CurrentProcessCount</id>
+        <className>probabilisticBroadcast.ActionManager</className>
+        <methodName>getCurrentProcessCount</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Clusters</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>Clusters</id>
+        <className>probabilisticBroadcast.ActionManager</className>
+        <methodName>getClusters</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+  </methodDataSources>
+  <countSources class="linked-hash-map"/>
+  <customNADataSources class="linked-hash-map"/>
+  <customAggDataSources class="linked-hash-map"/>
+</repast.simphony.data2.engine.DataSetDescriptor>
