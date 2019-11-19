@@ -13,7 +13,7 @@ The implemented paper is the _Lightweight Probabilistic Broadcast_, by P. TH. EU
 
 The description of the work can be found in the report.
 
-## Simulator installer
+## Simulator installer
 The JAR of the simulator installer can be found in this link: https://drive.google.com/file/d/1ic8dmu_jYDgKYTEHb3vKNFQJgaqIYaCB/view?usp=sharing
 
 It is too heavy to be loaded in the repository.
