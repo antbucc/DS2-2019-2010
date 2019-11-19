@@ -1,0 +1,49 @@
+<repast.simphony.data2.engine.DataSetDescriptor simphonyVersion="2.7.0">
+  <name>DS</name>
+  <type>AGGREGATE</type>
+  <inclTick>false</inclTick>
+  <inclBatchRun>false</inclBatchRun>
+  <inclRandomSeed>false</inclRandomSeed>
+  <scheduleParams>
+    <start>Infinity</start>
+    <interval>0.0</interval>
+    <priority>-Infinity</priority>
+    <pType>LAST</pType>
+    <duration>-1.0</duration>
+    <frequency>ONE_TIME</frequency>
+    <hashCode>-2028056221</hashCode>
+  </scheduleParams>
+  <atEnd>false</atEnd>
+  <methodDataSources class="linked-hash-map">
+    <entry>
+      <string>knownBy</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>knownBy</id>
+        <className>probabilisticBroadcast.Event</className>
+        <methodName>knownBy</methodName>
+        <aggType>MEAN</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>rounds</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>rounds</id>
+        <className>probabilisticBroadcast.Event</className>
+        <methodName>roundsNeeded</methodName>
+        <aggType>MEAN</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>totalProcesses</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>totalProcesses</id>
+        <className>probabilisticBroadcast.ActionManager</className>
+        <methodName>getTotalProcesses</methodName>
+        <aggType>SUM</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+  </methodDataSources>
+  <countSources class="linked-hash-map"/>
+  <customNADataSources class="linked-hash-map"/>
+  <customAggDataSources class="linked-hash-map"/>
+</repast.simphony.data2.engine.DataSetDescriptor>
