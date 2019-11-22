@@ -1,0 +1,9 @@
+set datafile separator ","
+set xlabel '# processes'		# x-axis label
+set ylabel '# rounds'			# y-axis label
+
+set term pngcairo             
+set output "expectedNoOfRoundsToInfect.png"
+
+plot "dataset.txt" using 2:1 smooth bezier lc 'red' lw 2 title ''
+     
