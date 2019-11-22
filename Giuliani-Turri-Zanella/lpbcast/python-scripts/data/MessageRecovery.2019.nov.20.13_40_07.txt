@@ -1,0 +1,5 @@
+"tick","avg_recovery_requests"
+100.0,"avg_recovery=306, fanout=2"
+100.0,"avg_recovery=173, fanout=3"
+100.0,"avg_recovery=115, fanout=4"
+100.0,"avg_recovery=89, fanout=5"
