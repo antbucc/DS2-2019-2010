@@ -1,0 +1,19 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>NodeData</name>
+  <dataSet>NodeData</dataSet>
+  <delimiter>;</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>tick</string>
+    <string>Id</string>
+    <string>View</string>
+    <string>Subs</string>
+    <string>Unsubs</string>
+    <string>EventIds</string>
+    <string>RetrieveBufElems</string>
+    <string>Crashed</string>
+    <string>Subscribed</string>
+  </sourceIds>
+  <fileName>..\DS2-A1\data.csv</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>
