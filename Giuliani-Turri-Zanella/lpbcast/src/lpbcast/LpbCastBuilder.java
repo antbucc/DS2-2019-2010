@@ -79,6 +79,9 @@ public class LpbCastBuilder implements ContextBuilder<Object> {
 			context.add(new Process(i, view, visual, collector));
 		}
 		
+		// identifier of the next process which is going to be created
+		currentProcessId = Configuration.INITIAL_NODES_NUMBER;
+		
 		RunEnvironment.getInstance().getCurrentSchedule().schedule(ScheduleParameters.createRepeating(1, 1, ScheduleParameters.LAST_PRIORITY), ()-> step());
 		
 		/*
@@ -116,11 +119,11 @@ public class LpbCastBuilder implements ContextBuilder<Object> {
 			Iterator<Object> it = context.getRandomObjects(Process.class, 1).iterator();
 			//the only case in which the iterator is empty is if all nodes have unsubmitted
 			if(it.hasNext()) {
-				Process neighbor =  (Process)it.next();
+				Process neighbor = (Process)it.next();
 				HashMap<Integer, Integer> processView = new HashMap<>();
 				processView.put(neighbor.processId, 0);
-				this.currentProcessId++;
 				Process newProcess = new Process(this.currentProcessId, processView, this.visual, this.collector);
+				this.currentProcessId++;
 				context.add(newProcess);
 				Iterator<Object> ite = context.getAgentLayer(Object.class).iterator();
 				newProcess.subscribe(neighbor.processId);
@@ -156,7 +159,6 @@ public class LpbCastBuilder implements ContextBuilder<Object> {
 		 * 
 		 if(getCurrentTick() == 100) {
 			// Simulate node subscription (Remember to set parameters accordingly)
-			currentProcessId = Configuration.INITIAL_NODES_NUMBER;
 			int targetId = RandomHelper.nextIntFromTo(0, Configuration.INITIAL_NODES_NUMBER - 1);
 			HashMap<Integer, Integer> processView = new HashMap<>();
 			processView.put(targetId, 0);
