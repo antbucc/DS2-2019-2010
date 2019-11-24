@@ -31,7 +31,6 @@ public class MessageHandler extends Handler{
 	    String myHash = sb.toString().toUpperCase();
 		
 		String id_tree = Integer.toString(this.tree.getId());
-		//String gossip = Integer.toString(this.gossip_count);
 		return  myHash + " ; " + id_tree;
 	}
 
