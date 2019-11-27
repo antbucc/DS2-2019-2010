@@ -7,13 +7,13 @@
 									
 		/>
 				<parameter name="recoveryInterval" displayName="Number of ticks needed for recovery" type="double" 
-						defaultValue="2.0" 
+						defaultValue="4.0" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
 				<parameter name="broadcast_rate" displayName="Broadcast rate" type="int" 
-						defaultValue="3" 
+						defaultValue="30" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
@@ -25,7 +25,7 @@
 									
 		/>
 				<parameter name="l" displayName="View size" type="int" 
-						defaultValue="6" 
+						defaultValue="20" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
@@ -55,61 +55,61 @@
 									
 		/>
 				<parameter name="eventIds_size" displayName="Size of eventIds buffer" type="int" 
-						defaultValue="10" 
+						defaultValue="180" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
 		/>
 				<parameter name="events_size" displayName="Size of events buffer" type="int" 
-						defaultValue="10" 
+						defaultValue="60" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
 		/>
 				<parameter name="r" displayName="Timeout for message retrieving (r)" type="int" 
-						defaultValue="2" 
+						defaultValue="3" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
 		/>
-				<parameter name="unsubscribe_rate" displayName="Number of tick before another unsubscribe" type="double" 
-						defaultValue="50.0" 
+				<parameter name="unsubscribe_rate" displayName="Number of ticks before another unsubscribe" type="double" 
+						defaultValue="20.0" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
 				<parameter name="unsubscribe_interval" displayName="Number of ticks the node is inactive" type="double" 
-						defaultValue="30.0" 
+						defaultValue="15.0" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
 				<parameter name="unsubs_size" displayName="Size of unsubs buffer" type="int" 
-						defaultValue="10" 
+						defaultValue="50" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
 		/>
 				<parameter name="retrieve_delay" displayName="Waiting rounds for message retrieving (k)" type="int" 
-						defaultValue="2" 
+						defaultValue="3" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
 		/>
 				<parameter name="long_ago" displayName="Out-of-date event interval" type="int" 
-						defaultValue="8" 
+						defaultValue="7" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
 		/>
 				<parameter name="subs_size" displayName="Size of subs buffer" type="int" 
-						defaultValue="10" 
+						defaultValue="60" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
 		/>
 				<parameter name="nodes_size" displayName="Number of nodes" type="int" 
-						defaultValue="10" 
+						defaultValue="125" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									

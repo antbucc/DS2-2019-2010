@@ -10,10 +10,9 @@
     <string>Subs</string>
     <string>Unsubs</string>
     <string>EventIds</string>
-    <string>RetrieveBufElems</string>
     <string>Crashed</string>
     <string>Subscribed</string>
   </sourceIds>
-  <fileName>..\DS2-A1\data.csv</fileName>
+  <fileName>output_data/node_data</fileName>
   <addTimeStamp>true</addTimeStamp>
 </repast.simphony.data2.engine.FileSinkDescriptor>

@@ -82,9 +82,7 @@ public class Node implements Comparable<Node> {
 	public void broadcast(Double tick, Integer m_id) {
 		Integer genRound = (int) Math.ceil(tick);
 		this.events.add(new Event(this.id.toString() + ":" + genRound.toString() + ":" + m_id.toString()));
-		// debug();
 		this.remove_oldest_notifications();
-		// debug();
 	}
 
 	private void send(Node target, Gossip gossip) {
@@ -152,8 +150,6 @@ public class Node implements Comparable<Node> {
 
 	synchronized private void receive(Gossip gossip) {
 		if (!this.crashed && this.subscribed) {
-			// debugGossip(gossip);
-			// debug();
 			// update view, subs, unsubs with unsubscriptions
 			for (Node node : gossip.getUnsubs().keySet()) {
 				this.view.remove(node);
@@ -238,7 +234,6 @@ public class Node implements Comparable<Node> {
 				this.eventIds.remove(0);
 			}
 		}
-		debug();
 	}
 
 	synchronized public Event retrieveEvent(String eventId) {
@@ -433,7 +428,7 @@ public class Node implements Comparable<Node> {
 
 			this.sendUnsub((int) Math.ceil(schedule.getTickCount()));
 			this.subscribed = false;
-			// debug();
+			
 			TreeMap<Node, Integer> temp_view = new TreeMap<>();
 			// remove all outgoing edges
 			for (Node node : this.view.keySet()) {
