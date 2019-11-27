@@ -99,7 +99,6 @@ public class Process {
 		int s = 0;
 		for (int f : DeliveryDistribution.fanout.get(this.getId()).values())
 			s += f;
-		System.out.println("S: " + s + " size: " + DeliveryDistribution.fanout.size());
 		return (double) s / DeliveryDistribution.fanout.size();
 	}
 	
