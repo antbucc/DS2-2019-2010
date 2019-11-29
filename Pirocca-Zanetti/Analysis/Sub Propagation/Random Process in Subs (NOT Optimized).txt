@@ -1,0 +1,13 @@
+tick: 5000.0, Random Process in Subs: 0.0
+tick: 5050.0, Random Process in Subs: 0.0
+tick: 5100.0, Random Process in Subs: 0.0
+tick: 5150.0, Random Process in Subs: 1.0
+tick: 5200.0, Random Process in Subs: 11.0
+tick: 5250.0, Random Process in Subs: 38.0
+tick: 5300.0, Random Process in Subs: 52.0
+tick: 5350.0, Random Process in Subs: 62.0
+tick: 5400.0, Random Process in Subs: 69.0
+tick: 5450.0, Random Process in Subs: 76.0
+tick: 5500.0, Random Process in Subs: 75.0
+tick: 5550.0, Random Process in Subs: 78.0
+tick: 5600.0, Random Process in Subs: 81.0

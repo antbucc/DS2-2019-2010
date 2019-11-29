@@ -1,0 +1,12 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>Random Process in Subs</name>
+  <dataSet>Random Process in Subs</dataSet>
+  <delimiter>,</delimiter>
+  <format>LINE</format>
+  <sourceIds class="linked-hash-set">
+    <string>tick</string>
+    <string>Random Process in Subs</string>
+  </sourceIds>
+  <fileName>C:\Users\Simone\Desktop\Random Process in Subs (Optimized).txt</fileName>
+  <addTimeStamp>false</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>

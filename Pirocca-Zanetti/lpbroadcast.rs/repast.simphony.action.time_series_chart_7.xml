@@ -1,9 +1,9 @@
 <repast.simphony.chart2.engine.TimeSeriesChartDescriptor simphonyVersion="2.7.0">
-  <name>First Process in View</name>
-  <dataSet>First Process in View</dataSet>
+  <name>Sub/UnSub</name>
+  <dataSet>Sub/unSub</dataSet>
   <xAxisLabel>Tick Count</xAxisLabel>
-  <yAxisLabel>First Process in View</yAxisLabel>
-  <chartTitle>First Process in View</chartTitle>
+  <yAxisLabel># of Processes</yAxisLabel>
+  <chartTitle>Subs vs unSubs</chartTitle>
   <type>TIME_SERIES</type>
   <background>
     <red>192</red>
@@ -21,13 +21,25 @@
   <showLegend>true</showLegend>
   <seriesIds>
     <entry>
-      <string>First Process in View</string>
+      <string>Subs</string>
       <SeriesData>
-        <label>First Process in View</label>
+        <label>Subs</label>
         <color>
           <red>0</red>
           <green>0</green>
           <blue>255</blue>
+          <alpha>255</alpha>
+        </color>
+      </SeriesData>
+    </entry>
+    <entry>
+      <string>UnSubs</string>
+      <SeriesData>
+        <label>UnSubs</label>
+        <color>
+          <red>255</red>
+          <green>0</green>
+          <blue>0</blue>
           <alpha>255</alpha>
         </color>
       </SeriesData>

@@ -15,6 +15,8 @@ public class ProcessMetrics
 	private short unSubsSize, subsSize, viewSize;
 	private short fanout;
 	private short eventPerRound;
+	private short currentEvents;
+	private short currentRound;
 	
 	
 	/**
@@ -41,6 +43,8 @@ public class ProcessMetrics
 		this.viewSize = viewSize;
 		this.fanout = fanout;
 		this.eventPerRound = eventPerRound;
+		this.currentEvents = 0;
+		this.currentRound = 1;
 	}
 
 
@@ -125,4 +129,55 @@ public class ProcessMetrics
 		return eventPerRound;
 	}
 
+
+	/**
+	 * @return the currentEvents
+	 */
+	public synchronized short getCurrentEvents() 
+	{
+		return currentEvents;
+	}
+
+
+	/**
+	 * @param currentEvents the currentEvents to set
+	 */
+	public synchronized void setCurrentEvents(short currentEvents) 
+	{
+		this.currentEvents = currentEvents;
+	}
+
+
+	/**
+	 * @return the currentRound
+	 */
+	public synchronized short getCurrentRound() 
+	{
+		return currentRound;
+	}
+
+
+	/**
+	 * @param currentRound the currentRound to set
+	 */
+	public synchronized void setCurrentRound(short currentRound) 
+	{
+		this.currentRound = currentRound;
+	}
+	
+	/**
+	 * increment currentEvents
+	 */
+	public synchronized void incCurrentEvents() 
+	{
+		this.currentEvents++;
+	}
+
+	/**
+	 * increment currentRound
+	 */
+	public synchronized void incCurrentRound() 
+	{
+		this.currentRound++;
+	}
 }

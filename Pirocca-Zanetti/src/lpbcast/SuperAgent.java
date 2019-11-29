@@ -15,7 +15,7 @@ import lpbcast.utils.ProcessMetrics;
 public class SuperAgent 
 {
 	private static final String PREFIX = "proc";
-	private static int millisToSleep = 18000;				//3 minutes
+	private static int millisToSleep = 60000;				//1 minute
 	private static int counter = 0;
 	
 	private int totalProcesses;
@@ -50,7 +50,10 @@ public class SuperAgent
 		}
 		
 		this.totalProcesses = totalProcesses;
-		this.processesToCrash = (int)Math.random()*(this.totalProcesses/2);
+		this.processesToCrash = (int)(Math.random()*((double)this.totalProcesses/4));
+		//this.processesToCrash = 5;
+		System.out.println("totalProcesses: " + totalProcesses);
+		System.out.println("processesToCrash: " + this.processesToCrash);
 	}
 	
 	/**
@@ -78,27 +81,38 @@ public class SuperAgent
 			@Override
 			public void run() 
 			{
-				try 
+				while(true) 
 				{
-					ArrayList<String> procIds = Util.getRandomKeySubset(processesToCrash, processesMap);
-					
-					for(String id : procIds)
+					try 
+					{					
+						ArrayList<String> procIds = Util.getRandomKeySubset(processesToCrash, processesMap);
+						System.out.println("\nprocIds list has " + procIds.size() + " entries");
+						
+						for(String id : procIds)
+						{
+							
+							Process proc = processesMap.get(id);
+							if(proc.isCrashed())
+							{
+								proc.setCrashed(false);
+							}
+							else
+							{
+								proc.setCrashed(true);
+							}
+						}		
+						
+						Thread.sleep(millisToSleep);
+						System.out.println("\nChaosThread resuming from switch");
+					} 
+					catch (InterruptedException e) 
 					{
-						Process proc = processesMap.get(id);
-						if(proc.isCrashed())
-							proc.setCrashed(false);
-						else
-							proc.setCrashed(true);
+						// TODO Auto-generated catch block
+						System.out.println("\n\nExecuteChaosThread() error\n\n");
+						e.printStackTrace();
 					}
-				
-					Thread.sleep(millisToSleep);
-				} 
-				catch (InterruptedException e) 
-				{
-					// TODO Auto-generated catch block
-					System.out.println("\n\nExecuteChaosThread() error\n\n");
-					e.printStackTrace();
 				}
+				
 			}
 		};
 		

@@ -1,9 +1,9 @@
 <repast.simphony.chart2.engine.TimeSeriesChartDescriptor simphonyVersion="2.7.0">
-  <name>Sub/UnSub</name>
-  <dataSet>Sub/unSub</dataSet>
+  <name>Random Process in Subs</name>
+  <dataSet>Random Process in Subs</dataSet>
   <xAxisLabel>Tick Count</xAxisLabel>
-  <yAxisLabel># of Processes</yAxisLabel>
-  <chartTitle>Subs vs unSubs</chartTitle>
+  <yAxisLabel>Processes</yAxisLabel>
+  <chartTitle>Random Process in Subs</chartTitle>
   <type>TIME_SERIES</type>
   <background>
     <red>192</red>
@@ -21,25 +21,13 @@
   <showLegend>true</showLegend>
   <seriesIds>
     <entry>
-      <string>Subs</string>
+      <string>Random Process in Subs</string>
       <SeriesData>
-        <label>Subs</label>
+        <label>Random Process in Subs</label>
         <color>
           <red>0</red>
           <green>0</green>
           <blue>255</blue>
-          <alpha>255</alpha>
-        </color>
-      </SeriesData>
-    </entry>
-    <entry>
-      <string>UnSubs</string>
-      <SeriesData>
-        <label>UnSubs</label>
-        <color>
-          <red>255</red>
-          <green>0</green>
-          <blue>0</blue>
           <alpha>255</alpha>
         </color>
       </SeriesData>

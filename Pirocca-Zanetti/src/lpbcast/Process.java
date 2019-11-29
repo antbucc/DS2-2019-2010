@@ -47,6 +47,7 @@ public class Process
 	private int eventId;
 
 	private String randomEventId;
+	private String randomSubId;
 
 	/**
 	 * @param space the position in the space
@@ -72,6 +73,9 @@ public class Process
 		this.view = new Hashtable<String, Process>();
 		this.retrieveBuf = new Hashtable<String, RetrieveEvent>();
 		this.subFrequencies = new Hashtable<String, Integer>();
+
+		this.randomEventId = "proc1-1";
+		this.randomSubId = "proc1";
 		
 		this.round = 0;
 		this.subRoundTimeout = (short) (this.round + roundConf.getMaxRoundsBeforeReSubscribe());
@@ -81,8 +85,6 @@ public class Process
 		this.randomSubThreashold = 0;
 		this.randomUnSubThreashold = 0;
 		this.eventId = 0;
-		
-		randomEventId = "proc1-1";
 	}
 	
 	/**
@@ -94,7 +96,7 @@ public class Process
 	public void checkClock()
 	{
 		// every one change round a tick after
-		if(clock > (0 + Integer.valueOf(this.id.substring(4)))) 
+		if(clock > 0) 
 		{
 			// triggered only at the benigging of every round
 			if(clock == (roundConf.getInterval() - 1))
@@ -107,14 +109,29 @@ public class Process
 		{
 			// restart clock and
 			// begin a new round
-			clock = roundConf.getInterval() + Integer.valueOf(this.id.substring(4));
+			clock = roundConf.getInterval();
 			round++;
 			
 			checkGossipReception();
 			
 			if(this.gossipReceived)
 			{
-				gossipCreation();
+				// create only the first event
+				//if((this.id.equals("proc1")) && (this.eventId == 0))
+				
+				short simRound = this.procConf.getCurrentRound();
+				short roundEvents = this.procConf.getCurrentEvents();
+				
+				if((this.round > simRound) && (roundEvents == this.procConf.getEventPerRound()))
+				{
+					this.procConf.incCurrentRound();
+					this.procConf.setCurrentEvents((short)0);
+				}
+				else if((this.round == simRound) && (roundEvents < this.procConf.getEventPerRound()))
+				{
+					gossipCreation(); 
+				}
+				
 				gossipEmission();
 			}
 		}
@@ -223,8 +240,8 @@ public class Process
 	{
 		if((state == States.SUBSCRIBED) && (!crashed))
 		{
-			for(int i=0; i<procConf.getEventPerRound(); i++) 
-			{
+			//for(int i=0; i<procConf.getEventPerRound(); i++) 
+			//{
 				eventId++;
 				String tmpId = Integer.toString(eventId);
 				
@@ -239,8 +256,11 @@ public class Process
 				// create the event and put it within 'events'
 				Event tmpEvent = new Event (id, tmpId, tmpDescr);
 				events.put(tmpEvent.getId(), tmpEvent);
+				eventIds.put(tmpEvent.getId(), tmpEvent.getId());
 				oldEvents.put(tmpEvent.getId(), tmpEvent);
-			}
+				
+				this.procConf.incCurrentEvents();
+			//}
 			
 			// purge the list 'events'
 			Util.purgeOldEvents(events, procConf.getEventsSize());
@@ -280,7 +300,7 @@ public class Process
 				// increment the 'age' of the event
 				tmpEvent.incAge();
 				
-				gossipEvents.add((Event)tmpEvent);
+				gossipEvents.add((Event)tmpEvent); 
 			}
 			
 			// create the list of 'eventIds'
@@ -307,7 +327,7 @@ public class Process
 					//eventNet.addEdge(this, tmpDest); TODO
 				}
 			}
-	
+			
 			// add current events to 'oldEvents', then delete them from 'events'
 			enumEvent = events.elements();
 			while(enumEvent.hasMoreElements())
@@ -414,6 +434,8 @@ public class Process
 						eventIds.put(tmpId, tmpId);
 						if(oldEvents.get(tmpId) == null)
 							oldEvents.put(tmpId, tmpEvent);
+						if(retrieveBuf.get(tmpId) != null)
+							retrieveBuf.remove(tmpId);
 					}
 				}
 				
@@ -424,7 +446,12 @@ public class Process
 					
 					// add element to 'retrieveBuf' if new
 					if(eventIds.get(tmpId) == null)
-						retrieveBuf.put(tmpId, new RetrieveEvent(tmpId, round, sender));
+					{
+						if(retrieveBuf.get(tmpId) == null)
+						{
+							retrieveBuf.put(tmpId, new RetrieveEvent(tmpId, round, sender));
+						}
+					}
 				}
 				
 				// purge 'eventIds' and 'events'
@@ -444,7 +471,6 @@ public class Process
 		{
 			Enumeration<RetrieveEvent> enumRetrieveEvent = retrieveBuf.elements();
 			
-			
 			while(enumRetrieveEvent.hasMoreElements())
 			{
 				RetrieveEvent tmp = enumRetrieveEvent.nextElement();
@@ -461,7 +487,9 @@ public class Process
 						{
 							// crash check
 							if(!crashed)
+							{
 								tmp.getSender().requestEvent(tmp.getId(), this); 
+							}
 						}
 						// otherwise, check if the event didn't arrive in 'r' rounds
 						else if((this.round - tmp.getRound()) > roundConf.getR())
@@ -470,15 +498,19 @@ public class Process
 							// but only if it is the 'r+1' round
 							if((this.round - tmp.getRound()) == (roundConf.getR() + 1))
 							{
-								int randomInt = (int)Math.random()*(view.size() - 1);
+								/*int randomInt = (int)Math.random()*(view.size() - 1);
 								
 								Hashtable<String, Process> cast = (Hashtable<String, Process>) view;
 								String [] keys = (String[]) cast.keySet().toArray();
 								
-								Process randomProcess = view.get(keys[randomInt]);
+								Process randomProcess = view.get(keys[randomInt]);*/
+								Process randomProcess = (Process) Util.getRandomElement(view.values());
+								
 								// crash check
 								if(!crashed)
+								{
 									randomProcess.requestEvent(tmp.getId(), this); 
+								}
 							}
 							// otherwise, check if the event didn't arrive in 'rr' rounds
 							else if((this.round - tmp.getRound()) > roundConf.getRr())
@@ -502,7 +534,9 @@ public class Process
 									// and then, ask for the event from the source
 									// crash check
 									if(!crashed)
+									{
 										source.requestEvent(tmp.getId(), this);
+									}
 								}
 							}
 						}
@@ -525,7 +559,7 @@ public class Process
 		// crash check
 		if(!crashed)
 		{
-			Event e = events.get(id);
+			Event e = oldEvents.get(id);
 			if(e != null) sender.retrieveEvent(e);
 		}
 	}
@@ -545,6 +579,9 @@ public class Process
 				events.put(e.getId(), e);
 				deliverEvent(e);
 				eventIds.put(e.getId(), e.getId());
+				
+				if(oldEvents.get(e.getId()) == null)
+					oldEvents.put(e.getId(), e);
 				
 				retrieveBuf.remove(e.getId());
 			}
@@ -580,8 +617,11 @@ public class Process
 		{
 			tmpNeighbourId = tmpNeighbour.getId();
 			
-			if(tmpNeighbourId != this.id)
+			if(!(tmpNeighbourId.equals(this.id)))
+			{
 				this.view.put(tmpNeighbourId, tmpNeighbour);
+				this.subs.put(tmpNeighbourId, tmpNeighbour);
+			}
 		}
 	}
 	
@@ -680,12 +720,19 @@ public class Process
 	 * 
 	 * @return if the process have a certain event
 	 */
-	public boolean hasFirstProcessInView()
+	public boolean hasRandomProcessInSubs()
 	{
-		String firstProcessId = "proc0";
 		boolean has = false;
-		if (view.get(firstProcessId) != null)
+		if (subs.get(this.randomSubId) != null)
 			has = true;
 		return has;
+	}
+
+	/**
+	 * @return the randomEventId
+	 */
+	public String getRandomEventId() 
+	{
+		return randomEventId;
 	}
 }

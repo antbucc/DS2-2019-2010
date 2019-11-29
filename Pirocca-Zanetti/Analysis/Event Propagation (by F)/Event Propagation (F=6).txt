@@ -1,0 +1,9 @@
+tick: 1.0, Event Propagation: 0.0
+tick: 51.0, Event Propagation: 57.0
+tick: 101.0, Event Propagation: 120.0
+tick: 151.0, Event Propagation: 121.0
+tick: 201.0, Event Propagation: 121.0
+tick: 251.0, Event Propagation: 122.0
+tick: 301.0, Event Propagation: 123.0
+tick: 351.0, Event Propagation: 125.0
+tick: 401.0, Event Propagation: 125.0

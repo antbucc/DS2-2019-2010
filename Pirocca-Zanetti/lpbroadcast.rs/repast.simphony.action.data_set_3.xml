@@ -1,35 +1,26 @@
 <repast.simphony.data2.engine.DataSetDescriptor simphonyVersion="2.7.0">
-  <name>Sub/unSub</name>
+  <name>Event Propagation</name>
   <type>AGGREGATE</type>
   <inclTick>true</inclTick>
   <inclBatchRun>false</inclBatchRun>
   <inclRandomSeed>false</inclRandomSeed>
   <scheduleParams>
     <start>1.0</start>
-    <interval>1.0</interval>
+    <interval>50.0</interval>
     <priority>-Infinity</priority>
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-1009207068</hashCode>
+    <hashCode>-753878467</hashCode>
   </scheduleParams>
   <atEnd>false</atEnd>
   <methodDataSources class="linked-hash-map">
     <entry>
-      <string>Subs</string>
+      <string>Event Propagation</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
-        <id>Subs</id>
+        <id>Event Propagation</id>
         <className>lpbcast.Process</className>
-        <methodName>isSub</methodName>
-        <aggType>SUM</aggType>
-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
-    </entry>
-    <entry>
-      <string>UnSubs</string>
-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
-        <id>UnSubs</id>
-        <className>lpbcast.Process</className>
-        <methodName>isUnSub</methodName>
+        <methodName>hasRandomEventId</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
     </entry>
