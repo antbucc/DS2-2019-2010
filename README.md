@@ -17,7 +17,7 @@ Alternatives:
 * Patrick Th. Eugster, Rachid Guerraoui, Sidath B. Handurukande, Petr Kouznetsov, Anne-Marie Kermarrec: Lightweight probabilistic broadcast. ACM Trans.Comput. Syst. 21(4): 341-374 (2003)
 
 ## Deadline First Assignment ##
-**Friday 22, November - 6pm (Mandatory)**
+**Friday 22, November 2019 - 6pm (Mandatory)**
 
 ## Second Assignment ##
 
@@ -27,4 +27,4 @@ Alternatives:
 * Gabriel Bracha: [Asynchronous Byzantine Agreement Protocols. Inf. Comput. 75(2): 130-143 (1987).](https://core.ac.uk/download/pdf/82523202.pdf)
 
 ## Deadline Second Assignment ##
-**Friday 10, January - 6pm (Mandatory)**
+**Friday 10, January 2020 - 6pm (Mandatory)**
