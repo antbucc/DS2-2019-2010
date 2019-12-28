@@ -23,8 +23,8 @@ Alternatives:
 
 Alternatives:
 * Ion Stoica, Robert Morris, David Liben-Nowell, David R Karger, M Frans Kaashoek, Frank Dabek, and Hari Balakrishnan. Chord: a scalable peer-to-peer lookup protocol for internet applications. IEEE/ACM Transactions on Networking (TON), 11(1):17{32, 2003.
-* [Christian Cachin, Klaus Kursawe, Frank Petzold, Victor Shoup: Secure and Efficient Asynchronous Broadcast Protocols.] (https://www.shoup.net/papers/ckps.pdf) 
-* [Gabriel Bracha: Asynchronous Byzantine Agreement Protocols. Inf. Comput. 75(2): 130-143 (1987).] (https://core.ac.uk/download/pdf/82523202.pdf)
+* Christian Cachin, Klaus Kursawe, Frank Petzold, Victor Shoup: [Secure and Efficient Asynchronous Broadcast Protocols.](https://www.shoup.net/papers/ckps.pdf) 
+* Gabriel Bracha: [Asynchronous Byzantine Agreement Protocols. Inf. Comput. 75(2): 130-143 (1987).](https://core.ac.uk/download/pdf/82523202.pdf)
 
 ## Deadline Second Assignment ##
 **Friday 10, January - 6pm (Mandatory)**
