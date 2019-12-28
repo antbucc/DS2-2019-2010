@@ -1,4 +1,0 @@
-Model that simulates the execution of the "Lightweight Probabilistic Protocol" 
-algorithm. The model was developed by Giacomo Callegari and Fabio Molignoni  
-as first assignment of the "Distributed Systems 2" course at UNITN, 
-A.Y. 2019-2020.
