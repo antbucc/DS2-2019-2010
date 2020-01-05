@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+					<parameter name="voluntary_leave_mean" displayName="09. Voluntary Leave Frequency Mean (Poisson Distribution)" type="float" 
+						defaultValue="0.02" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$FloatConverter"
+									
+		/>
+				<parameter name="dataset_type" displayName="19. Dataset Type" type="java.lang.String" 
+						defaultValue="None" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									values="None Lookups-Time-Stable Lookup-Steps Expired-Requests Stabilization-Period Stabilization-Interval Lookups-Time-Unstable "
+						
+		/>
+				<parameter name="global_timeout" displayName="15. Timeout Global Lookup" type="int" 
+						defaultValue="300" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="protocol_mode" displayName="05. Protocol Mode" type="java.lang.String" 
+						defaultValue="Iterative" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									values="Iterative Recursive "
+						
+		/>
+				<parameter name="nodes_number" displayName="02. Initial Nodes Number" type="int" 
+						defaultValue="500" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="stabilize_interval" displayName="11. Stabilize Interval" type="int" 
+						defaultValue="15" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="predecessor_timeout" displayName="17. Timeout Check Predecessor" type="int" 
+						defaultValue="30" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="fix_finger_interval" displayName="13. Fix Finger Interval" type="int" 
+						defaultValue="15" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="network_delay_mean" displayName="03. Network Delay - lambda (Exponential Distribution)" type="float" 
+						defaultValue="0.2" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$FloatConverter"
+									
+		/>
+				<parameter name="successor_list_size" displayName="06. Successor List Size" type="int" 
+						defaultValue="13" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="randomSeed" displayName="01. Default Random Seed" type="int" 
+						defaultValue="__NULL__"
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="join_mean" displayName="10. Joining Frequency Mean (Poisson Distribution)" type="float" 
+						defaultValue="0.03" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$FloatConverter"
+									
+		/>
+				<parameter name="lookup_generation_probability" displayName="07. Lookup Generation Probability" type="float" 
+						defaultValue="0.2" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$FloatConverter"
+									
+		/>
+				<parameter name="check_predecessor_interval" displayName="12. Check Predecessor Interval" type="int" 
+						defaultValue="15" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="notify_predecessor_optimization" displayName="18. Optimization: Notify Predecessor" type="boolean" 
+						defaultValue="true" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter"
+									
+		/>
+				<parameter name="stabilize_timeout" displayName="16. Timeout Stabilize" type="int" 
+						defaultValue="30" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="local_timeout" displayName="14. Timeout Local Lookup" type="int" 
+						defaultValue="30" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="failure_mean" displayName="08. Failure Frequency Mean (Poisson Distribution)" type="float" 
+						defaultValue="0.01" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$FloatConverter"
+									
+		/>
+		</parameters>
+
+

@@ -1,0 +1,6 @@
+#
+#Sun Dec 22 15:17:51 CET 2019
+incoming=tcp\://127.0.0.1\:5555
+outgoing=tcp\://127.0.0.1\:5556
+scenario=../chord.rs
+working.directory=../
