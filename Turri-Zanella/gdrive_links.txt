@@ -1,0 +1,6 @@
+Please notice that, as denoted in the README.MD file, the .jar of the model can be downloaded here:
+- https://drive.google.com/open?id=11ey-iXUzArzKExm3o6zm00--67V7lZSl
+
+If you want to replicate the analyses described in our report, download the datasets from here:
+- https://drive.google.com/open?id=1RpplfJzqEBHEGgu29ZdvPCyHKw2s1qdj
+Once you have download the datasets, store them in the /chord/analyses/data folder.
