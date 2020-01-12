@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578324665873.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2930058323",
+    "id" : "D1EC7C58",
+    "lastKnownWriteTime" : 1578343839,
+    "last_content_update" : 1578343839279,
+    "path" : "~/Documents/Universita/Corsi/5Anno/DS2/lab/2019/Progetto2/chord/DS2_Chord/CSV/csv_study/box_plot_controlled_range.R",
+    "project_path" : "box_plot_controlled_range.R",
+    "properties" : {
+        "cursorPosition" : "44,0",
+        "scrollLine" : "22",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

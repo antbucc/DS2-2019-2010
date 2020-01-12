@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578326753621.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6D5D03E9",
+    "lastKnownWriteTime" : 1578326722,
+    "last_content_update" : 1578326753621,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "861E3B9F",
+        "caption" : "mean_dataframe",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=mean_dataframe&cache_key=861E3B9F",
+        "displayedObservations" : "10",
+        "environment" : "",
+        "expression" : "mean_dataframe",
+        "object" : "mean_dataframe",
+        "preview" : "0",
+        "totalObservations" : "10",
+        "variables" : "3"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

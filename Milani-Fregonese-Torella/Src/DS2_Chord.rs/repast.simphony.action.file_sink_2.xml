@@ -1,0 +1,13 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>equal_range_id_test</name>
+  <dataSet>equal_range_id_dataset</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>Id</string>
+    <string>SuperNodeNameForMe</string>
+    <string>range_id</string>
+  </sourceIds>
+  <fileName>equal_range_id_test.csv</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>

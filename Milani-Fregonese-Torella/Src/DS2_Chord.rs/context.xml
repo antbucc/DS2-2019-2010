@@ -1,0 +1,11 @@
+<context id="DS2_Chord" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://repast.org/scenario/context">
+	<projection type="continuous space" id="space"></projection>
+	<projection type="grid" id="grid"></projection>
+	<projection type="network" id="insertNetwork"></projection>
+	<projection type="network" id="lookupNetwork"></projection>
+	<projection type="network" id="fingersNetwork"></projection>
+	<projection type="network" id="keyFindedNetwork"></projection>
+	<projection type="network" id="joinNetwork"></projection>
+	<projection type="network" id="stabilizeNetwork"></projection>
+	<projection type="network" id="notifyNetwork"></projection>
+</context>

@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578339946509.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "551554567",
+    "id" : "77D40495",
+    "lastKnownWriteTime" : 1576593169,
+    "last_content_update" : 1576593169,
+    "path" : "~/src/iof-tools/Rscripts/centralityPlotter.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "19,15",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

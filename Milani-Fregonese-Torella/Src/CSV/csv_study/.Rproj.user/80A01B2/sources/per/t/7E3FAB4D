@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578324659054.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1948180253",
+    "id" : "7E3FAB4D",
+    "lastKnownWriteTime" : 1578342503,
+    "last_content_update" : 1578342503520,
+    "path" : "~/Documents/Universita/Corsi/5Anno/DS2/lab/2019/Progetto2/chord/DS2_Chord/CSV/csv_study/average_number_of_keys_per_node.R",
+    "project_path" : "average_number_of_keys_per_node.R",
+    "properties" : {
+        "cursorPosition" : "77,116",
+        "scrollLine" : "62",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
