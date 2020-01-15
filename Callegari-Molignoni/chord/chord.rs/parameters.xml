@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+	<parameter name="randomSeed"
+		displayName="Default Random Seed" type="int" defaultValue="__NULL__" />
+
+	<parameter name="ID_SIZE"
+		displayName="ID space is defined modulo 2^m" type="int"
+		defaultValue="13" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+
+	<parameter name="NUMBER_NODES"
+		displayName="Number of nodes in the system" type="int"
+		defaultValue="40" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+
+	<parameter name="NUMBER_WAIT_ROUNDS"
+		displayName="Number of rounds between one lookup and the next"
+		type="int" defaultValue="0" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+
+	<parameter name="NUMBER_STABILIZE_ROUNDS"
+		displayName="Number of rounds between stabilizations" type="int"
+		defaultValue="10" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	/>
+
+	<parameter name="NUMBER_FIX_FINGERS_ROUNDS"
+		displayName="Number of rounds between updates of the fingers and the successor list"
+		type="int" defaultValue="25" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+
+	<parameter name="PROBABILITY_JOIN"
+		displayName="Probability that a new node joins at each round"
+		type="double" defaultValue="0" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+	/>
+
+	<parameter name="PROBABILITY_FAIL"
+		displayName="Probability that a node fails at each round"
+		type="double" defaultValue="0.01" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+	/>
+
+	<parameter name="PROBABILITY_LEAVE"
+		displayName="Probability that a node leaves at each round"
+		type="double" defaultValue="0" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+
+	<parameter name="USE_SUCCESSOR_LIST"
+		displayName="Use the successor list" type="boolean"
+		defaultValue="true" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
+</parameters>
